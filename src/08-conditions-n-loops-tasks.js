@@ -344,19 +344,8 @@ function isCreditCardNumber(ccn) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(num) {
-  const sumOfDigit = (x) => {
-    let result;
-    if (typeof x === 'number') result = x.toString().split('');
-    else result = x;
-    if (result.length === 1) return x;
-    return result.reduce((a, b) => Number.parseFloat(a) + Number.parseFloat(b));
-  };
-
-  let res = num;
-
-  while (res.toString().length !== 1) res = sumOfDigit(num);
-  return res;
+function getDigitalRoot(/* num */) {
+  throw new Error('Not implemented');
 }
 
 
